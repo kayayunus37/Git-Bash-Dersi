@@ -91,7 +91,28 @@ Dallar arasında geçiş yapmak için git checkout komutunu kullanırsın:
 
 `git checkout main`
 
-**c. Branch’leri Birleştirme (Merge)**
+**c. Uzak Dala Göndermek ve Eşleştirmek**
+
+Aşağıdaki komutu kullanarak new_feature dalını uzak depoya gönderirken aynı zamanda bu dalı upstream olarak ayarlayabilirsin:
+
+`git push --set-upstream origin new_feature`
+
+Bu komut:
+
+- origin: Uzak depoyu temsil eder (varsayılan ad).
+- new_feature: Göndermek istediğin yerel dalın adıdır.
+
+Bu komut çalıştırıldığında, new_feature dalı uzak depoya yüklenecek ve bu dalın upstream olarak ayarlanacaktır.
+
+**d. Önceden Uzak Dala Bağlama**
+
+Alternatif olarak, git push komutunu kullanmadan önce, mevcut dalı uzak dal ile ilişkilendirmek için aşağıdaki komutu da kullanabilirsin:
+```
+git branch --set-upstream-to=origin/new_feature
+git push
+```
+
+**e. Branch’leri Birleştirme (Merge)**
 
 Geliştirdiğin özelliği ana dal ile birleştirmek için:
 
