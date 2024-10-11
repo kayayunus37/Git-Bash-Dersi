@@ -185,6 +185,7 @@ Bir commit’i geri almak istiyorsan:
   `git reset --soft HEAD~1`
 
 - Son commit’i tamamen geri almak (Değişiklikler de silinir):
+- 
   `git reset --hard HEAD~1`
 
 ---
